@@ -1,5 +1,6 @@
 package com.logicalProgram;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BinarySearch {
@@ -32,6 +33,7 @@ public class BinarySearch {
         for(int i=0; i<arr.length; i++){
             arr[i] = sc.nextInt();
         }
+        Arrays.sort(arr);
         System.out.println("Enter the target value to search: ");
         int target = sc.nextInt();
         int result = binarySearch(arr,target);

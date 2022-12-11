@@ -1,4 +1,4 @@
-package com.logicalProgram;
+package com.logicalProgram.array;
 
 import java.util.Scanner;
 
@@ -9,22 +9,21 @@ public class PrimeNumber{
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         if(isPrime(n))
-            System.out.println(" Not Prime Number");
-        else
             System.out.println("Prime Number");
+        else
+            System.out.println("Not Prime Number");
         sc.close();
     }
 
-    private static boolean isPrime(int n) {
-        int num=0;
-        boolean flag = false;
+    public static boolean isPrime(int n) {
+        boolean flag = true;
         for (int i = 2; i < n/2; i++){
-            if(n%i==0)
-                num++;
+            if(n%i==0){
+                flag = false;
+                break;
+            }
+                
         }
-        if(num > 0)
-            return !flag;
-        else
-            return flag;
+        return flag;
     }
 }

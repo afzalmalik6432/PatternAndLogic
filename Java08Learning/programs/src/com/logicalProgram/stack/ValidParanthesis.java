@@ -6,8 +6,7 @@ public class ValidParanthesis {
 
     static boolean checkParanthesis(String s) {
         Stack<Character> st = new Stack<>();
-        char[] arr = s.toCharArray();
-        for (char c : arr) {
+        for (char c : s.toCharArray()) {
             if (c == '(')
                 st.push(')');
             else if (c == '{')
